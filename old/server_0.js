@@ -1,29 +1,6 @@
 var cfg = require('./config.json');
 cfg.server.port = process.env.PORT || cfg.server.port;
 var io = require('socket.io')(cfg.server.port);
-var sio = require('../../lib/socket.io');
-
-/**
- * Module dependencies.
- */
-
-var express = require('express')
-/**
- * App.
- */
-var app = express.createServer();
-
-/**
- * App listen.
- */
-
-app.listen(cfg.server.port, function () {
-  var addr = app.address();
-  console.log('   app listening on http://' + addr.address + ':' + addr.port);
-});
-
-var io = sio.listen(app);
-
 
 /* custom log */
 	var originalFunc = console.log;
