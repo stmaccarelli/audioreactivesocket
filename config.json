@@ -1,0 +1,14 @@
+{
+  "mixer": {
+  	"host": "localhost",
+    "port": 1501
+  },
+  "server": {
+  	"host": "localhost",
+    "port": 1502
+  },
+  "client": {
+  	"host": "localhost",
+    "port": 1503
+  }
+}

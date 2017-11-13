@@ -1,0 +1,21 @@
+{
+  "name": "Hyperland",
+  "version": "1.0.0",
+  "description": "hyperland socket server",
+  "main": "server.js",
+  "engines": {
+    "node": "6.1.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "nodo"
+  ],
+  "author": "The Connective",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.6"
+  }
+}
