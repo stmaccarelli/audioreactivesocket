@@ -1,5 +1,5 @@
 var cfg = require('./config.json');
-cfg.server.port = process.env.PORT || cfg.server.port;
+cfg.server.port = process.env.PORT || 1502;
 var io = require('socket.io')(cfg.server.port);
 
 /* custom log */
@@ -11,7 +11,7 @@ var io = require('socket.io')(cfg.server.port);
 var spliceOne = function(arr, index) {
 			// var len=arr.length;
 			// if (!len) { return }
-			// while (index<len) { 
+			// while (index<len) {
 			//       arr[index] = arr[index+1]; index++ }
 			// arr.length--;
 			var res = [];
@@ -57,7 +57,7 @@ io.on('connection', function(socket) {
 					mobi_cnt_int -= 1;
 					if(mobi_cnt_int < 0) mobi_cnt_int = 0;
 					var len = mobi_cnt_len();
-					
+
 					io.to(client_visual).emit('mobi_count', {'clients': len  });
 					io.to(client_mxr).emit('mobi_count', {'clients': len });
 				}
@@ -160,7 +160,7 @@ io.on('connection', function(socket) {
 				_curScene = scene;
 				socket.broadcast.emit('cur_scene', {'curscene':_curScene});
 			});
-			
+
 	/* EOF SCENE */
 })
 
