@@ -1,5 +1,5 @@
 var cfg = require('./config.json');
-cfg.server.port = process.env.PORT || 1502;
+cfg.server.port = process.env.PORT || cfg.server.port;
 var io = require('socket.io')(cfg.server.port);
 
 /* custom log */
