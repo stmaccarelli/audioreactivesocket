@@ -62,7 +62,9 @@ var client_visual = null;
 var client_mxr = null;
 var globals = [];
 var _curScene = "intro";
-io.on('connection', function(socket) {
+
+io.sockets.on('connection', function(socket) {
+
 	log('a new connection from  ' + socket.id );
 			//  client device is locked / ulocked by the user
 			socket.on('hidden', function(msg) {
