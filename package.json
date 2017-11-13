@@ -1,5 +1,5 @@
 {
-  "name": "audioreactive server",
+  "name": "audioreactivesocket",
   "version": "1.0.0",
   "description": "hyperland socket server",
   "main": "server.js",
